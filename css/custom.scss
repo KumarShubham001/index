@@ -1,0 +1,191 @@
+:root {
+    --theme1: #E3E7F1;
+    --theme2: #C6CBEF;
+    --theme3: #8186D5;
+    --theme4: #494CA2;
+    --theme-dark: #1c1c1e;
+    --theme-light: #fefefe;
+
+    --eye-color: #fffdf9;
+    --iris-color: #343434;
+    --pupil-color: #8186D5;
+    /* --pupil-color: #ffa899; */
+}
+
+.w100 {
+    width: 100%;
+    display: inline-block;
+}
+
+.w50 {
+    display: inline-block;
+    width: 50%;
+}
+
+.background {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('../images/background.png');
+    background-position: center;
+    background-repeat: repeat;
+    background-size: auto;
+    width: 100vw;
+    max-height: 100vh;
+    overflow: auto;
+
+    .hero-wrapper {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+
+        .hero {
+            img {
+                width: 150px;
+                border-radius: 50%;
+                border: 3px solid var(--theme4);
+                padding: 0px;
+                margin: 0px;
+            }
+
+            h1.title {
+                font-size: 16px;
+                color: var(--theme4);
+                letter-spacing: 0.3px;
+            }
+
+            .social-links {
+                margin-top: 15px;
+
+                ul {
+                    padding: 0px;
+                    margin: 0px;
+                    list-style-type: none;
+                    display: flex;
+                    width: auto;
+                    align-items: center;
+                    justify-content: center;
+
+                    &:hover {
+                        li {
+                            a {
+                                color: var(--theme3);
+                            }
+                        }
+                    }
+
+                    li {
+                        display: inline-block;
+                        margin: 0px;
+                        padding: 0px;
+                        height: 30px;
+
+                        &:not(:first-of-type) {
+                            margin-left: 15px;
+                        }
+
+                        a {
+                            color: var(--theme4);
+                            font-size: 18px;
+                        }
+
+                        &:hover {
+                            a {
+                                color: var(--theme4);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .link-wrapper {
+        width: 70%;
+        margin: auto;
+
+        .link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            img {
+                width: 100%;
+            }
+
+            i {
+                font-size: 72px;
+            }
+
+            .tint {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.8);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                span {
+                    font-size: 22px;
+                    font-weight: bolder;
+                    letter-spacing: 0.3px;
+                    color: var(--theme1);
+                    display: block;
+                }
+            }
+
+            &:hover {
+                .tint {
+                    cursor: pointer;
+                    background: rgba(0, 0, 0, 0.85);
+
+                    span {
+                        text-decoration: underline;
+                        color: white;
+                    }
+                }
+            }
+
+            &.social {
+                background: var(--theme1);
+                color: rgba(0, 0, 0, 0.8);
+                padding: 15px;
+
+                &:hover {
+                    background: var(--theme4);
+                    color: rgba(255, 255, 255, 1);
+                    cursor: pointer
+                }
+            }
+        }
+    }
+
+    .footer {
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 0.2px;
+        word-spacing: 2px;
+        font-size: 12px;
+
+        p {
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .footer {
+        p {
+            width: 267px;
+        }
+    }
+}
